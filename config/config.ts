@@ -37,13 +37,7 @@ export default defineConfig({
           name: 'login',
           path: '/user/login',
           component: './user/login',
-        },
-        {
-          name: '标准列表',
-          icon: 'smile',
-          path: '/user-list/device',
-          component: './user/Devices',
-        },
+        }
       ],
     },
     {
@@ -53,59 +47,40 @@ export default defineConfig({
       component: './Welcome',
     },
     {
-      path: '/admin',
-      name: 'admin',
-      icon: 'crown',
-      access: 'canAdmin',
-      component: './Admin',
-      routes: [
-        {
-          path: '/admin/sub-page',
-          name: 'sub-page',
-          icon: 'smile',
-          component: './Welcome',
-        },
-      ],
-    },
-    {
-      name: '查询表格',
-      icon: 'smile',
+      name: 'userList',
+      icon: 'user',
       path: '/user-list',
       component: './user/List',
-    },
-    {
-      name: 'list.table-list',
-      icon: 'table',
-      path: '/list',
-      component: './ListTableList',
     },
     {
       path: '/',
       redirect: '/welcome',
     },
     {
-      name: '高级详情页',
-      icon: 'smile',
-      path: '/channel/detail',
-      component: './Channel/ChannelDetail',
-    },
-    {
-      name: '频道',
-      icon: 'smile',
+      name: 'channel',
+      icon: 'PicLeftOutlined',
       path: '/channel',
       component: './Channel',
-    },
-    {
-      name: '基础详情页',
-      icon: 'smile',
-      path: '/program/detail',
-      component: './Channel/Program/components/Detail',
-    },
-    {
-      name: '标准列表',
-      icon: 'smile',
-      path: '/program',
-      component: './Channel/Program',
+      routes:[
+        {
+          name: '高级详情页',
+          icon: 'smile',
+          path: '/channel/detail',
+          component: './Channel/ChannelDetail',
+      },
+        {
+          name: 'program',
+          icon: 'smile',
+          path: '/program',
+          component: './Channel/Program',
+        },
+        {
+          name: '基础详情页',
+          icon: 'smile',
+          path: '/program/detail',
+          component: './Channel/Program/components/Detail',
+        },
+      ]
     },
     {
       name: '个人设置',
