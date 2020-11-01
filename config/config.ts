@@ -2,9 +2,7 @@
 import { defineConfig } from 'umi';
 import defaultSettings from './defaultSettings';
 import proxy from './proxy';
-
 const { REACT_APP_ENV } = process.env;
-
 export default defineConfig({
   hash: true,
   antd: {},
@@ -40,6 +38,12 @@ export default defineConfig({
           path: '/user/login',
           component: './user/login',
         },
+        {
+          name: '标准列表',
+          icon: 'smile',
+          path: '/user-list/device',
+          component: './user/Devices',
+        },
       ],
     },
     {
@@ -64,6 +68,12 @@ export default defineConfig({
       ],
     },
     {
+      name: '查询表格',
+      icon: 'smile',
+      path: '/user-list',
+      component: './user/List',
+    },
+    {
       name: 'list.table-list',
       icon: 'table',
       path: '/list',
@@ -72,6 +82,48 @@ export default defineConfig({
     {
       path: '/',
       redirect: '/welcome',
+    },
+    {
+      name: '高级详情页',
+      icon: 'smile',
+      path: '/channel/detail',
+      component: './Channel/ChannelDetail',
+    },
+    {
+      name: '频道',
+      icon: 'smile',
+      path: '/channel',
+      component: './Channel',
+    },
+    {
+      name: '基础详情页',
+      icon: 'smile',
+      path: '/program/detail',
+      component: './Channel/Program/components/Detail',
+    },
+    {
+      name: '标准列表',
+      icon: 'smile',
+      path: '/program',
+      component: './Channel/Program',
+    },
+    {
+      name: '个人设置',
+      icon: 'smile',
+      path: '/setting',
+      component: './Setting',
+    },
+    {
+      name: '查询表格',
+      icon: 'smile',
+      path: '/vod',
+      component: './Video',
+    },
+    {
+      name: '空白页面',
+      icon: 'smile',
+      path: '/menus',
+      component: './Menus',
     },
     {
       component: './404',
